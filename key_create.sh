@@ -5,7 +5,7 @@ PUB="ssh-rsa ABAAB3NzaC1yc2EAAAABIwAAAQEA0ODytizWnCRC8A7UXTH9o45eewj1KpAl4HFdjCS
 ### ここからkeyが既に作成済みの場合
 
 pubc () {
-		mkdir ~/.ssh
+	mkdir_ssh
         cat << EOF > $AUTHFILE
 $PUB
 EOF
