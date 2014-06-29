@@ -10,7 +10,6 @@ pubc () {
 $PUB
 EOF
         chmod 600 $AUTHFILE
-#        cat $AUTHFILE | sed -e "s/localhost/`uname -n`/g" > $AUTHFILE
         echo ".ssh is create"
         cat $AUTHFILE
 }
@@ -44,7 +43,6 @@ keyc (){
 if [ ! -d ~/.ssh ]; then
         echo "### key create now. ####"
         $1
-#       pub_create
         elif [ -f  ~/.ssh/`whoami`.pub ]; then
 
         echo "### ~/.ssh/`whoami`.pub was exist. ####"
