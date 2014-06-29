@@ -34,7 +34,10 @@ keyc (){
         chmod 600 $AUTHFILE
         echo "### Copy the following ###"
         cat ~/.ssh/`whoami`
+
         echo "##########################"
+        rm ~/.ssh/`whoami`
+        echo "### key deleted ###"
 }
 
 ### 実際の稼働スクリプト
