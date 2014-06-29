@@ -44,13 +44,13 @@ keyc (){
 
 #key_add (){
 if [ ! -d ~/.ssh ]; then
-        echo "### key create now. ####"
+        echo "### key create now. ###"
         $1
         elif [ -f  ~/.ssh/`whoami`.pub ]; then
 
-        echo "### ~/.ssh/`whoami`.pub was exist. ####"
+        echo "### ~/.ssh/`whoami`.pub was exist. ###"
  		elif [ -f $AUTHFILE ]; then
-                        echo "###" $AUTHFILE "was exist."
+                        echo "###" $AUTHFILE "was exist. ###"
                         cat $AUTHFILE
                         exit
         else
