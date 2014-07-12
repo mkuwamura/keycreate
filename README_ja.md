@@ -46,7 +46,7 @@ sshを使ってログインする際に、使用するkeyを簡単に作成す�
 
 
 [mkuwamura@xxxxxx01 ~]$ sh key_create.sh keyc
-### key create now. ###
+ ### key create now. ###
 Generating public/private rsa key pair.
 Created directory '/home/mkuwamura/.ssh'.
 Your identification has been saved in /home/mkuwamura/.ssh/mkuwamura.
@@ -65,7 +65,7 @@ The key's randomart image is:
 |                 |
 |                 |
 +-----------------+
-### Copy the following ###
+ ### Copy the following ###
 -----BEGIN RSA PRIVATE KEY-----
 MIIEoQIBAAKCAQEAv8h7lBGMnN+N9sUo9HAvaWem7y1yY8+QkR1MnUtmxx2QaG8m
 WwLVtGhKkSl5IkgvB2vxQsHHg0ZVyO997navsCPrHKkT6CxaE5hSlaWvmToyZ/zq
@@ -94,5 +94,5 @@ p/DqniXE82sbFRRS9lYH/f66yYFdQ2vLt8LgdGrxslN5dil1DNkP3qRMkE8rpby3
 IAf7ytS1REYKgAAfgZM43bKp2f4GT6SpcdxjAKRRo6kHCFZ8wg==
 -----END RSA PRIVATE KEY-----
 ##########################
-### key deleted ###
+ ### key deleted ###
 [mkuwamura@xxxxxx01 ~]$
