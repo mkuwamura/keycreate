@@ -97,3 +97,6 @@ sshを使ってログインする際に、クライアントに使用するkey�
     ### key deleted ###
     [mkuwamura@xxxxxx01 ~]$
     
+## 課題
+
+authorized_keysに追加するパターンを考慮できていない。今のところ、新規のみ対応。
