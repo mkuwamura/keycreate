@@ -5,18 +5,18 @@ PUB="ssh-rsa ABAAB3NzaC1yc2EAAAABIwAAAQEA0ODytizWnCRC8A7UXTH9o45eewj1KpAl4HFdjCS
 ### ここからkeyが既に作成済みの場合
 
 pubc () {
-	mkdir_ssh
-        cat << EOF > $AUTHFILE
-$PUB
-EOF
-        chmod 600 $AUTHFILE
-        echo ".ssh is create"
-        cat $AUTHFILE
+  mkdir_ssh
+  cat << EOF > $AUTHFILE
+  $PUB
+  EOF
+  chmod 600 $AUTHFILE
+  echo ".ssh is create"
+  cat $AUTHFILE
 }
 
 mkdir_ssh () {
-        mkdir ~/.ssh
-        chmod 700 ~/.ssh
+  mkdir ~/.ssh
+  chmod 700 ~/.ssh
 }
 
 ### ここまでkeyが既に作成済みの場合
@@ -24,39 +24,34 @@ mkdir_ssh () {
 
 ### ここからスクリプト削除
 me_delete (){
-        rm -i $0
+  rm -i $0
 }
 #### ここまでスクリプト削除
 
 keyc (){
-        ssh-keygen  -t rsa -N "" -f ~/.ssh/`whoami`
-        mv ~/.ssh/`whoami`.pub $AUTHFILE
-        chmod 600 $AUTHFILE
-        echo "### Copy the following ###"
-        cat ~/.ssh/`whoami`
+  chmod 600 $AUTHFILE
+  echo "### Copy the following ###"
+  cat ~/.ssh/`whoami`
 
-        echo "##########################"
-        rm ~/.ssh/`whoami`
-        echo "### key deleted ###"
+   echo "##########################"
+   rm ~/.ssh/`whoami`
+   echo "### key deleted ###"
 }
 
 ### 実際の稼働スクリプト
 
 #key_add (){
 if [ ! -d ~/.ssh ]; then
-        echo "### key create now. ###"
+  echo "### key create now. ###"
+  $1
+    elif [ -f  ~/.ssh/`whoami`.pub ]; then
+    echo "### ~/.ssh/`whoami`.pub was exist. ###"
+      elif [ -f $AUTHFILE ]; then
+        echo "###" $AUTHFILE "was exist. ###"
+        cat $AUTHFILE
+        exit
+      else
         $1
-        elif [ -f  ~/.ssh/`whoami`.pub ]; then
-
-        echo "### ~/.ssh/`whoami`.pub was exist. ###"
- 		elif [ -f $AUTHFILE ]; then
-                        echo "###" $AUTHFILE "was exist. ###"
-                        cat $AUTHFILE
-                        exit
-        else
-		$1
-
- 
 fi
  exit 0
 #
