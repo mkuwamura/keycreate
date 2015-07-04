@@ -29,6 +29,8 @@ me_delete (){
 #### ここまでスクリプト削除
 
 keyc (){
+  ssh-keygen  -t rsa -N "" -f ~/.ssh/`whoami`
+  mv ~/.ssh/`whoami`.pub $AUTHFILE
   chmod 600 $AUTHFILE
   echo "### Copy the following ###"
   cat ~/.ssh/`whoami`
