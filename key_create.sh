@@ -8,7 +8,7 @@ pubc () {
   mkdir_ssh
   cat << EOF > $AUTHFILE
   $PUB
-  EOF
+EOF
   chmod 600 $AUTHFILE
   echo ".ssh is create"
   cat $AUTHFILE
