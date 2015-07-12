@@ -6,8 +6,8 @@ PUB="ssh-rsa ABAAB3NzaC1yc2EAAAABIwAAAQEA0ODytizWnCRC8A7UXTH9o45eewj1KpAl4HFdjCS
 
 pubc () {
   mkdir_ssh
-  cat << EOF > $AUTHFILE
-  $PUB
+cat << EOF > $AUTHFILE
+$PUB
 EOF
   chmod 600 $AUTHFILE
   echo ".ssh is create"
