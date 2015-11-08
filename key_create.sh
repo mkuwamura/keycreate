@@ -1,4 +1,5 @@
 #!/bin/bash
+#author mkuwamura
 AUTHFILE=~/.ssh/authorized_keys
 PUB="ssh-rsa ABAAB3NzaC1yc2EAAAABIwAAAQEA0ODytizWnCRC8A7UXTH9o45eewj1KpAl4HFdjCSWV2ay5PRLo5QQpvX62gBRptxtDfzbyVTZGERBPw74uPrkprGBowObJI+MZUSxN9Lb/dZGzeKvaWySwebVwT++4Veak5Rv+FRwbQa3VrTjurxSwvQaob3SA3vlzf83V1et1uiEq5F3HvBGdp9JtjSsWu8waG6Cktmorr9DoOj+4q8joLnVoEB5hG7UaZa0QGig+I0jMv8izF7BD35H+FfHGd5TdCiG33HZ1CxN8BkQtS6+NDZi/ThKqWXlouJGK7wSAQF/J07Zm45J0G//hsZxJ29PJcfGEQSivAxUA5DRiCeFyw== "`whoami`@`hostname -f`
 
