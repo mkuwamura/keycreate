@@ -17,7 +17,6 @@ EOF
 mkdir_ssh () {
   mkdir ~/.ssh
   chmod 700 ~/.ssh
-}
 
 ### ここまでkeyが既に作成済みの場合
 
@@ -30,13 +29,14 @@ me_delete (){
 
 keyc (){
   ssh-keygen  -t rsa -N "" -f ~/.ssh/`whoami`
-  mv ~/.ssh/`whoami`.pub $AUTHFILE
+  cat ~/.ssh/`whoami`.pub >> $AUTHFILE
   chmod 600 $AUTHFILE
   echo "### Copy the following ###"
   cat ~/.ssh/`whoami`
 
    echo "##########################"
    rm ~/.ssh/`whoami`
+   rm ~/.ssh/`whoami`.pub
    echo "### key deleted ###"
 }
 
@@ -48,9 +48,6 @@ if [ ! -d ~/.ssh ]; then
   $1
     elif [ -f  ~/.ssh/`whoami`.pub ]; then
     echo "### ~/.ssh/`whoami`.pub was exist. ###"
-      elif [ -f $AUTHFILE ]; then
-        echo "###" $AUTHFILE "was exist. ###"
-        cat $AUTHFILE
         exit
       else
         $1
