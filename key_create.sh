@@ -18,7 +18,7 @@ EOF
 mkdir_ssh () {
   mkdir ~/.ssh
   chmod 700 ~/.ssh
-
+}
 ### ここまでkeyが既に作成済みの場合
 
 
